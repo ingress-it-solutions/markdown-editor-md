@@ -60,30 +60,30 @@ if (!function_exists('editor_config')) {
 
         return '<!-- editor.md config -->
     <script type="text/javascript">
-    var _'. array_get($config, 'id', 'myeditor') .';
+    var _'. Arr::get($config, 'id', 'myeditor') .';
     $(function() {
         //emoji
         editormd.emoji = {
-            path : "'. array_get($config, 'emojiPath', config('editor.emojiPath')) .'",
+            path : "'. Arr::get($config, 'emojiPath', config('editor.emojiPath')) .'",
             ex : ".png"
         };
-        _'. array_get($config, 'id', 'myeditor') .' = editormd({
-                id : "'. array_get($config, 'id', 'myeditor') .'",
-                width : "'. array_get($config, 'width', config('editor.width')) .'",
-                height : "'. array_get($config, 'height', config('editor.height')) .'",
-                saveHTMLToTextarea : '. array_get($config, 'saveHTMLToTextarea', config('editor.saveHTMLToTextarea')) .',
-                emoji : '. array_get($config, 'emoji', config('editor.emoji')) .',
-                taskList : '. array_get($config, 'taskList', config('editor.taskList')) .',
-                tex : '. array_get($config, 'tex', config('editor.tex')) .',
-                toc : '. array_get($config, 'toc', config('editor.toc')) .',
-                tocm : '. array_get($config, 'tocm', config('editor.tocm')) .',
-                codeFold : '. array_get($config, 'codeFold', config('editor.codeFold')) .',
-                flowChart: '. array_get($config, 'flowChart', config('editor.flowChart')) .',
-                sequenceDiagram: '. array_get($config, 'sequenceDiagram', config('editor.sequenceDiagram')) .',
-                path : "'. array_get($config, 'path', config('editor.path')) .'",
-                imageUpload : '. array_get($config, 'imageUpload', config('editor.imageUpload')) .',
-                imageFormats : '. array_get($config, 'imageFormats', json_encode(config('editor.imageFormats'))) .',
-                imageUploadURL : "'. array_get($config, 'imageUploadURL', config('editor.imageUploadURL')) .'?_token=' . csrf_token() . '&from=xetaravel-editor-md"
+        _'. Arr::get($config, 'id', 'myeditor') .' = editormd({
+                id : "'. Arr::get($config, 'id', 'myeditor') .'",
+                width : "'. Arr::get($config, 'width', config('editor.width')) .'",
+                height : "'. Arr::get($config, 'height', config('editor.height')) .'",
+                saveHTMLToTextarea : '. Arr::get($config, 'saveHTMLToTextarea', config('editor.saveHTMLToTextarea')) .',
+                emoji : '. Arr::get($config, 'emoji', config('editor.emoji')) .',
+                taskList : '. Arr::get($config, 'taskList', config('editor.taskList')) .',
+                tex : '. Arr::get($config, 'tex', config('editor.tex')) .',
+                toc : '. Arr::get($config, 'toc', config('editor.toc')) .',
+                tocm : '. Arr::get($config, 'tocm', config('editor.tocm')) .',
+                codeFold : '. Arr::get($config, 'codeFold', config('editor.codeFold')) .',
+                flowChart: '. Arr::get($config, 'flowChart', config('editor.flowChart')) .',
+                sequenceDiagram: '. Arr::get($config, 'sequenceDiagram', config('editor.sequenceDiagram')) .',
+                path : "'. Arr::get($config, 'path', config('editor.path')) .'",
+                imageUpload : '. Arr::get($config, 'imageUpload', config('editor.imageUpload')) .',
+                imageFormats : '. Arr::get($config, 'imageFormats', json_encode(config('editor.imageFormats'))) .',
+                imageUploadURL : "'. Arr::get($config, 'imageUploadURL', config('editor.imageUploadURL')) .'?_token=' . csrf_token() . '&from=xetaravel-editor-md"
         });
     });
     </script>';
